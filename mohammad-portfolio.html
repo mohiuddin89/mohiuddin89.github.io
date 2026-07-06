@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohammad Mohiuddin · Cloud DevOps Engineer</title>
+<meta name="description" content="Cloud DevOps Engineer with 6+ years building AWS, Amazon EKS, and CI/CD systems in production. CKA certified. Cherry Hill, NJ · U.S. citizen · Remote.">
+<meta property="og:title" content="Mohammad Mohiuddin · Cloud DevOps Engineer">
+<meta property="og:description" content="AWS, Kubernetes, Terraform, GitOps. 18% AWS cost reduction, 40% faster recovery, zero-downtime EKS migration.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3F5F4;
+  --card:#FFFFFF;
+  --ink:#152019;
+  --ink-soft:#4A5751;
+  --line:#D9DFDC;
+  --green:#0E7A5F;
+  --green-deep:#0A5A46;
+  --amber:#B96A00;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --sans:'Archivo',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--green-deep)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(243,245,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:22px;height:58px}
+.brand{font-family:var(--mono);font-weight:600;font-size:14px;color:var(--green-deep);text-decoration:none}
+.navlinks{display:flex;gap:18px;margin-left:auto;flex-wrap:wrap}
+.navlinks a{font-size:13.5px;text-decoration:none;color:var(--ink-soft);font-weight:500}
+.navlinks a:hover{color:var(--green-deep)}
+.nav-cta{font-size:13px;font-family:var(--mono);background:var(--ink);color:#fff!important;padding:7px 14px;border-radius:6px;text-decoration:none}
+@media(max-width:760px){.navlinks{display:none}}
+
+/* hero */
+header{padding:72px 0 56px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);font-weight:600}
+h1{font-size:clamp(34px,5.4vw,58px);line-height:1.06;font-weight:750;letter-spacing:-.02em;margin:14px 0 18px;max-width:15ch}
+h1 em{font-style:normal;color:var(--green)}
+.lede{max-width:56ch;color:var(--ink-soft);font-size:18px}
+.hero-actions{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.btn{display:inline-block;font-family:var(--mono);font-size:14px;font-weight:600;text-decoration:none;padding:11px 18px;border-radius:8px}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-deep)}
+.btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}}
+
+/* terraform plan signature */
+.term{background:#111A15;color:#C9D6CF;border-radius:12px;font-family:var(--mono);font-size:13px;line-height:1.65;overflow:hidden;box-shadow:0 18px 40px -18px rgba(21,32,25,.45)}
+.term-bar{display:flex;gap:7px;padding:11px 14px;background:#0B120E;border-bottom:1px solid #1E2B23}
+.term-bar span{width:11px;height:11px;border-radius:50%;background:#2A3A30}
+.term-bar span:first-child{background:#E0655A}.term-bar span:nth-child(2){background:#E0B45A}.term-bar span:nth-child(3){background:#4FBF8B}
+.term pre{padding:18px 20px;overflow-x:auto}
+.t-cmd{color:#fff}.t-add{color:#5FD3A2}.t-key{color:#9FB8AA}.t-val{color:#E8F3ED}.t-num{color:#F0C674}.t-dim{color:#5E7268}
+
+/* sections */
+section{padding:68px 0;border-bottom:1px solid var(--line)}
+.sec-label{font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-deep);font-weight:600}
+h2{font-size:clamp(26px,3.4vw,36px);font-weight:720;letter-spacing:-.015em;margin:10px 0 14px}
+.sec-intro{color:var(--ink-soft);max-width:62ch;margin-bottom:34px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px}
+.stat b{display:block;font-family:var(--mono);font-size:26px;color:var(--green-deep);font-weight:600}
+.stat span{font-size:13px;color:var(--ink-soft)}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr}}
+.about-grid p{margin-bottom:16px;color:var(--ink-soft)}
+.about-grid p strong{color:var(--ink)}
+.focus-list{display:grid;gap:12px}
+.focus{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--green);border-radius:8px;padding:14px 16px}
+.focus b{display:block;font-size:15px;margin-bottom:3px}
+.focus span{font-size:13.5px;color:var(--ink-soft)}
+
+/* stack */
+.stack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.stack-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.stack-grid{grid-template-columns:1fr}}
+.stack-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px}
+.stack-card h3{font-size:15px;margin-bottom:4px}
+.stack-card p{font-size:13px;color:var(--ink-soft);margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-family:var(--mono);font-size:12px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--ink)}
+
+/* experience */
+.job{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 28px;margin-bottom:18px}
+.job-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+.job h3{font-size:19px}
+.job .co{color:var(--green-deep)}
+.job-meta{font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);white-space:nowrap}
+.job ul{margin:12px 0 0 18px;display:grid;gap:8px}
+.job li{font-size:15px;color:var(--ink-soft)}
+.job li::marker{color:var(--green)}
+
+/* debugging patterns */
+.debug-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:760px){.debug-grid{grid-template-columns:1fr}}
+.dbg{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.dbg h3{font-family:var(--mono);font-size:14px;color:var(--amber);margin-bottom:8px}
+.dbg p{font-size:13.5px;color:var(--ink-soft);margin-bottom:5px}
+.dbg p b{color:var(--ink);font-weight:600}
+
+/* projects */
+.proj{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 28px;margin-bottom:18px;display:grid;grid-template-columns:1fr auto;gap:20px}
+@media(max-width:760px){.proj{grid-template-columns:1fr}}
+.proj h3{font-size:19px;margin-bottom:8px}
+.proj p{font-size:15px;color:var(--ink-soft);margin-bottom:14px;max-width:62ch}
+.proj .tag{font-family:var(--mono);font-size:11.5px;color:var(--amber);text-transform:uppercase;letter-spacing:.07em;font-weight:600}
+.proj-note{font-family:var(--mono);font-size:12px;color:var(--ink-soft);align-self:end;white-space:nowrap}
+
+/* contact */
+.contact-card{background:var(--ink);color:#E7EFEA;border-radius:14px;padding:44px 40px;text-align:center}
+.contact-card h2{color:#fff}
+.contact-card p{color:#AFC1B7;max-width:52ch;margin:0 auto 26px}
+.contact-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.contact-links a{font-family:var(--mono);font-size:13.5px;color:#E7EFEA;text-decoration:none;border:1px solid #3A4A41;padding:9px 16px;border-radius:8px}
+.contact-links a:hover{border-color:var(--green);color:#5FD3A2}
+
+footer{padding:28px 0;font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">mohammad@cloud:~$</a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#stack">Stack</a>
+      <a href="#experience">Experience</a>
+      <a href="#debugging">Debugging</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="mailto:mohiuddn45@gmail.com?subject=Resume%20Request%20-%20Mohammad%20Mohiuddin">Request Resume</a>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Cherry Hill, New Jersey · U.S. Citizen · Remote</div>
+      <h1>Infrastructure that ships, scales, and <em>stays up</em>.</h1>
+      <p class="lede">I'm Mohammad Mohiuddin, a Cloud DevOps Engineer with 6+ years running AWS, Amazon EKS, and CI/CD systems in production — with a bias toward automation, observability, and leaving a clean trail behind me.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:mohiuddn45@gmail.com?subject=Resume%20Request%20-%20Mohammad%20Mohiuddin">Request Resume</a>
+        <a class="btn btn-ghost" href="#projects">View Projects</a>
+      </div>
+    </div>
+    <div class="term" aria-label="Terminal showing a terraform plan summary of Mohammad's career">
+      <div class="term-bar"><span></span><span></span><span></span></div>
+      <pre><span class="t-cmd">$ terraform plan</span>
+
+Terraform will perform the following actions:
+
+  <span class="t-add">+ resource "engineer" "mohammad_mohiuddin"</span> {
+      <span class="t-key">role</span>       = <span class="t-val">"Cloud DevOps Engineer"</span>
+      <span class="t-key">experience</span> = <span class="t-val">"6+ years in production"</span>
+      <span class="t-key">certs</span>      = [<span class="t-val">"CKA"</span>]
+      <span class="t-key">aws_spend</span>  = <span class="t-num">-18%</span>
+      <span class="t-key">mttr</span>       = <span class="t-num">-40%</span>
+      <span class="t-key">downtime</span>   = <span class="t-num">0</span>
+    }
+
+<span class="t-add">Plan: 1 to add,</span> <span class="t-dim">0 to change, 0 to destroy.</span></pre>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-label">About</div>
+    <h2>Hands-on with the systems that need to stay up</h2>
+    <div class="about-grid">
+      <div>
+        <p>I'm a Cloud DevOps Engineer with <strong>6+ years of experience</strong> building and operating AWS infrastructure, Kubernetes platforms, and CI/CD systems in production — most of it close to real workloads, where uptime, cost, and recovery time are things people actually notice.</p>
+        <p>Currently at <strong>Kaplan North America</strong>, I led a <strong>zero-downtime blue/green migration to Amazon EKS</strong>, cut AWS spend by <strong>18%</strong>, and reduced mean time to recovery by <strong>40%</strong> by unifying observability across Prometheus, Grafana, Loki, and PagerDuty.</p>
+        <p>Before that I ran DevOps at <strong>JPMorgan Chase</strong> — infrastructure in a compliance-heavy financial environment — and at <strong>TripAdvisor</strong>, supporting high-traffic travel and hospitality workloads.</p>
+        <p>When I want to go deeper on fundamentals, I build them from scratch: a 22-phase bare-metal Kubernetes platform on Proxmox, bootstrapped by hand with kubeadm, with an internal two-tier PKI, self-hosted GitLab, ArgoCD, and OpenTelemetry.</p>
+      </div>
+      <div class="focus-list">
+        <div class="focus"><b>Cloud infrastructure</b><span>AWS across compute, networking, and IAM — described in Terraform so it can be reviewed, versioned, and rebuilt.</span></div>
+        <div class="focus"><b>Kubernetes platforms</b><span>EKS in production; a bare-metal kubeadm cluster at home to understand every layer.</span></div>
+        <div class="focus"><b>Delivery &amp; GitOps</b><span>GitLab CI, GitHub Actions, and ArgoCD delivering releases through dev, staging, and production.</span></div>
+        <div class="focus"><b>Reliability</b><span>Prometheus, Grafana, and Loki wired to PagerDuty, with runbooks that shorten recovery.</span></div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>6+ yrs</b><span>Cloud &amp; DevOps in production</span></div>
+      <div class="stat"><b>-18%</b><span>AWS spend at Kaplan</span></div>
+      <div class="stat"><b>-40%</b><span>Mean time to recovery</span></div>
+      <div class="stat"><b>1</b><span>Certification · CKA</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="wrap">
+    <div class="sec-label">Core Technologies</div>
+    <h2>The stack, and how I actually use it</h2>
+    <p class="sec-intro">Nothing here is decorative — every tool maps to a role or project on this page.</p>
+    <div class="stack-grid">
+      <div class="stack-card"><h3>Cloud</h3><p>Where the workloads run.</p><div class="chips"><span class="chip">AWS</span><span class="chip">Amazon EKS</span><span class="chip">EC2 · S3 · RDS</span><span class="chip">Lambda</span><span class="chip">VPC · IAM</span><span class="chip">CloudWatch</span></div></div>
+      <div class="stack-card"><h3>Containers &amp; Orchestration</h3><p>Packaging and scheduling.</p><div class="chips"><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">Helm</span><span class="chip">ECR</span></div></div>
+      <div class="stack-card"><h3>CI/CD &amp; GitOps</h3><p>How code reaches production.</p><div class="chips"><span class="chip">GitLab CI</span><span class="chip">GitHub Actions</span><span class="chip">Jenkins</span><span class="chip">ArgoCD</span></div></div>
+      <div class="stack-card"><h3>Infrastructure as Code</h3><p>Infrastructure you can review.</p><div class="chips"><span class="chip">Terraform</span><span class="chip">Ansible</span><span class="chip">Pulumi</span></div></div>
+      <div class="stack-card"><h3>Observability</h3><p>Knowing what is happening.</p><div class="chips"><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">Loki</span><span class="chip">PagerDuty</span></div></div>
+      <div class="stack-card"><h3>Security &amp; Scripting</h3><p>Guardrails and glue.</p><div class="chips"><span class="chip">Trivy</span><span class="chip">OWASP Dep-Check</span><span class="chip">Python</span><span class="chip">Bash</span><span class="chip">Linux</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-label">Experience</div>
+    <h2>Where I have done the work</h2>
+    <p class="sec-intro">Three roles, one throughline: making infrastructure repeatable, observable, and cheaper to run.</p>
+
+    <div class="job">
+      <div class="job-head">
+        <h3>Cloud DevOps Engineer · <span class="co">Kaplan North America</span></h3>
+        <div class="job-meta">Jun 2024 – Present · Remote</div>
+      </div>
+      <ul>
+        <li>Led a zero-downtime blue/green migration of production workloads to Amazon EKS with rollback validation and no customer-facing downtime.</li>
+        <li>Cut AWS spend 18% through right-sizing, cleanup of orphaned resources, and tag-based governance.</li>
+        <li>Reduced mean time to recovery 40% by unifying observability on Prometheus, Grafana, and Loki with PagerDuty alerting.</li>
+        <li>Built reusable Terraform modules with remote state in S3 and DynamoDB and CI-gated plan workflows.</li>
+        <li>Implemented ArgoCD GitOps delivering Helm releases across environments with auditable, version-controlled change history.</li>
+        <li>Wired Trivy and OWASP Dependency-Check into GitLab CI pipelines for container and dependency scanning.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <h3>DevOps Engineer · <span class="co">JPMorgan Chase</span></h3>
+        <div class="job-meta">Mar 2022 – May 2024</div>
+      </div>
+      <ul>
+        <li>Operated AWS infrastructure for financial services workloads in a compliance-heavy environment with strict change control.</li>
+        <li>Built and maintained CI/CD pipelines on Jenkins and GitLab CI with automated testing, security scanning, and gated deployments.</li>
+        <li>Managed infrastructure as code with Terraform and configuration management with Ansible across multiple environments.</li>
+        <li>Supported containerized workloads on Kubernetes with Prometheus and Grafana monitoring.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <h3>DevOps Engineer · <span class="co">TripAdvisor</span></h3>
+        <div class="job-meta">Nov 2019 – Feb 2022</div>
+      </div>
+      <ul>
+        <li>Supported high-traffic travel and hospitality workloads on AWS across development, staging, and production.</li>
+        <li>Automated build and deployment workflows with Jenkins, Docker, and Bash/Python scripting.</li>
+        <li>Provisioned and managed Linux infrastructure (Ubuntu, CentOS, Debian) with Ansible.</li>
+        <li>Improved deployment reliability with containerization and standardized environment configuration.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="debugging">
+  <div class="wrap">
+    <div class="sec-label">Debugging</div>
+    <h2>Production problems I'm comfortable investigating</h2>
+    <p class="sec-intro">How I think when something breaks — signal, what I check, likely path.</p>
+    <div class="debug-grid">
+      <div class="dbg"><h3>CrashLoopBackOff</h3><p><b>Check:</b> container logs and events, exit code, recent image or config change.</p><p><b>Path:</b> bad config, failing probe, or missing dependency — fix or roll back the release.</p></div>
+      <div class="dbg"><h3>OOMKilled (exit 137)</h3><p><b>Check:</b> memory requests/limits, recent traffic, whether usage grows over time.</p><p><b>Path:</b> right-size limits, or fix the leak if memory only climbs.</p></div>
+      <div class="dbg"><h3>ArgoCD OutOfSync / Degraded</h3><p><b>Check:</b> diff between Git and cluster, sync hooks, RBAC, image tag.</p><p><b>Path:</b> reconcile the manifest and fix the drift, or roll back the offending commit.</p></div>
+      <div class="dbg"><h3>AWS AccessDenied</h3><p><b>Check:</b> IAM policy, role trust, the exact action and resource in the error.</p><p><b>Path:</b> grant the least privilege that actually works — no broad wildcards.</p></div>
+      <div class="dbg"><h3>Failed rollout</h3><p><b>Check:</b> events, readiness probes, resource pressure, image pull status.</p><p><b>Path:</b> roll back to the last good Helm release, then fix forward.</p></div>
+      <div class="dbg"><h3>Red pipeline blocking a deploy</h3><p><b>Check:</b> failing stage logs — test, build, or scan — and what changed last.</p><p><b>Path:</b> fix the failing step or flaky dependency and get it green again.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-label">Featured Projects</div>
+    <h2>Case studies, not screenshots</h2>
+    <p class="sec-intro">Three pieces of work I can talk through end to end: the problem, what I built, and what it changed.</p>
+
+    <div class="proj">
+      <div>
+        <div class="tag">Production · Kaplan North America</div>
+        <h3>Zero-Downtime EKS Blue/Green Migration</h3>
+        <p>Moved production workloads to Amazon EKS using blue/green deployments with ALB weighted target groups, DNS TTL management, IRSA-based workload identity, and rehearsed rollback — with no customer-facing downtime.</p>
+        <div class="chips"><span class="chip">Amazon EKS</span><span class="chip">Blue/Green</span><span class="chip">Terraform</span><span class="chip">Helm</span><span class="chip">Route 53</span></div>
+      </div>
+      <div class="proj-note">Proprietary (Kaplan)</div>
+    </div>
+
+    <div class="proj">
+      <div>
+        <div class="tag">Production · Kaplan North America</div>
+        <h3>GitOps CI/CD &amp; Observability Platform</h3>
+        <p>GitLab CI pipelines with Trivy scanning, ArgoCD GitOps delivery of Helm releases, and a unified observability stack on Prometheus, Grafana, and Loki paged through PagerDuty — cutting mean time to recovery by 40%.</p>
+        <div class="chips"><span class="chip">GitLab CI</span><span class="chip">ArgoCD</span><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">Loki</span><span class="chip">PagerDuty</span></div>
+      </div>
+      <div class="proj-note">Proprietary (Kaplan)</div>
+    </div>
+
+    <div class="proj">
+      <div>
+        <div class="tag">Personal platform project · 2024 – Present</div>
+        <h3>Homelab v2.5 — Bare-Metal Kubernetes Platform</h3>
+        <p>A 22-phase, production-style Kubernetes platform built by hand on bare-metal Proxmox: manual kubeadm bootstrap, internal two-tier PKI, self-hosted GitLab, ArgoCD GitOps, and OpenTelemetry — to understand cluster lifecycle from first principles.</p>
+        <div class="chips"><span class="chip">kubeadm</span><span class="chip">Proxmox</span><span class="chip">Two-tier PKI</span><span class="chip">GitLab CE</span><span class="chip">ArgoCD</span><span class="chip">OpenTelemetry</span></div>
+      </div>
+      <div class="proj-note">Private repo (on request)</div>
+    </div>
+
+    <div class="stack-grid" style="margin-top:26px">
+      <div class="stack-card"><h3>Certifications</h3><p>Verified fundamentals.</p><div class="chips"><span class="chip">CKA (Linux Foundation)</span></div></div>
+      <div class="stack-card"><h3>Education</h3><p>Academic background.</p><div class="chips"><span class="chip">Master of Business Studies</span><span class="chip">National University of Bangladesh</span></div></div>
+      <div class="stack-card"><h3>Work authorization</h3><p>No sponsorship needed.</p><div class="chips"><span class="chip">U.S. Citizen</span><span class="chip">Remote-ready · EST</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="border-bottom:none">
+  <div class="wrap">
+    <div class="contact-card">
+      <div class="sec-label" style="color:#5FD3A2">Contact</div>
+      <h2>Let's talk about your infrastructure</h2>
+      <p>If you're hiring for a DevOps, Platform, or Cloud Infrastructure role, I'd be glad to walk through my work. The fastest way to reach me is email.</p>
+      <div class="contact-links">
+        <a href="mailto:mohiuddn45@gmail.com">mohiuddn45@gmail.com</a>
+        <a href="https://www.linkedin.com/in/mdmohiuddin45">LinkedIn</a>
+        <a href="https://github.com/mohiuddin89">GitHub</a>
+        <a href="mailto:mohiuddn45@gmail.com?subject=Resume%20Request%20-%20Mohammad%20Mohiuddin">Request Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:0 24px">
+    <span>© 2026 Mohammad Mohiuddin · Cloud DevOps Engineer</span>
+    <span>Cherry Hill, NJ · U.S. Citizen · Remote</span>
+  </div>
+</footer>
+
+</body>
+</html>
